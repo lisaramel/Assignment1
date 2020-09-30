@@ -11,11 +11,9 @@ import java.util.Scanner;
  * Project: Objektorienterad programmering och Java
  * Copywrite: MIT
  */
-public class AnimalHotelDemo {
+public class HealthyPetsDemo {
+    public static void main(String[] args) {
 
-    AnimalHotelDemo() {
-
-        Scanner scan = new Scanner(System.in);
 
         //polymorphism
         Animal venus = new Cat("katt", "Venus", 5, FoodType.KATTFODER);
@@ -33,26 +31,27 @@ public class AnimalHotelDemo {
         animals.add(hypno);
 
 
-        System.out.println("Vilket djur vill du mata?");
-        String input = scan.nextLine();
+        while(true) {
+            Scanner scan = new Scanner(System.in);
 
-        boolean found = false;
-        for (Animal a : animals) {
-            if (a.getName().equalsIgnoreCase(input)) {
-                a.PrintOut();
-                found = true;
+            System.out.println("Vilket djur vill du mata?");
+            String input = scan.nextLine();
+
+            boolean animalFound = false;
+            for (Animal a : animals) {
+                if (a.getName().equalsIgnoreCase(input)) {
+                    a.PrintOut();
+                    animalFound = true;
+                }
             }
-        }
-        if (!found) {
-            System.out.print("Det här djuret finns inte incheckat på HealtyPets för tillfället.");
+            if (!animalFound) {
+                System.out.print("Det här djuret finns inte incheckat på HealtyPets för tillfället.");
+                System.out.println();
+            }
+            System.out.println();
+
+            if(input == null)
+                break;
         }
     }
-
-
-    public static void main(String[] args) {
-        AnimalHotelDemo a1 = new AnimalHotelDemo();
-
-
-    }
-
 }

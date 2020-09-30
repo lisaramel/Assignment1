@@ -9,6 +9,7 @@ package Assignment1;
  */
 public class Dog extends Animal{
 
+    //inkapsling
     protected FoodType foodType;
 
     public Dog(String animal, String name, double weight, FoodType foodType){
