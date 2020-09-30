@@ -17,7 +17,7 @@ public class HealthyPetsDemo {
 
         //polymorphism
         Animal venus = new Cat("katt", "Venus", 5, FoodType.KATTFODER);
-        Animal ove = new Cat("katt", "Ove", 3, FoodType.KATTFODER);
+        Cat ove = new Cat("katt", "Ove", 3, FoodType.KATTFODER);
         Animal dogge = new Dog("hund", "Dogge", 10, FoodType.HUNDFODER);
         Animal sixten = new Dog("hund", "Sixten", 5, FoodType.HUNDFODER);
         Animal hypno = new Snake("orm", "Hypno", 1, FoodType.ORMPELLETS);

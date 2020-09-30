@@ -9,7 +9,7 @@ package Assignment1;
  */
 
 //enum
-enum FoodType{
+public enum FoodType{
 
     HUNDFODER("hundfoder"), KATTFODER("kattfoder"), ORMPELLETS("ormpellets");
 
