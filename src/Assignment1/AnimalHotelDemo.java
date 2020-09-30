@@ -18,12 +18,10 @@ public class AnimalHotelDemo {
         Scanner scan = new Scanner(System.in);
 
         //polymorphism
-        Cat venus = new Cat("katt", "Venus", 5, FoodType.KATTFODER);
+        Animal venus = new Cat("katt", "Venus", 5, FoodType.KATTFODER);
         Animal ove = new Cat("katt", "Ove", 3, FoodType.KATTFODER);
-
         Animal dogge = new Dog("hund", "Dogge", 10, FoodType.HUNDFODER);
         Animal sixten = new Dog("hund", "Sixten", 5, FoodType.HUNDFODER);
-
         Animal hypno = new Snake("orm", "Hypno", 1, FoodType.ORMPELLETS);
 
         List<Animal> animals = new ArrayList<>();
@@ -38,15 +36,17 @@ public class AnimalHotelDemo {
         System.out.println("Vilket djur vill du mata?");
         String input = scan.nextLine();
 
-      for (Animal a : animals) {
-
-              if (a.getName().equalsIgnoreCase(input))
-                  a.PrintOut();
+        boolean found = false;
+        for (Animal a : animals) {
+            if (a.getName().equalsIgnoreCase(input)) {
+                a.PrintOut();
+                found = true;
+            }
         }
-
+        if (!found) {
+            System.out.print("Det här djuret finns inte incheckat på HealtyPets för tillfället.");
+        }
     }
-
-
 
 
     public static void main(String[] args) {
