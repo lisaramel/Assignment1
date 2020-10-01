@@ -18,7 +18,7 @@ public class Cat extends Animal{
     }
 
     public double catPortion(double weight){
-        return (weight*100)/150;
+        return (weight*1000)/150;
     }
 
     @Override

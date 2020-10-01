@@ -20,7 +20,7 @@ public class Dog extends Animal{
 
     public double dogPortion(double weight){
 
-        return (weight*100)/100;
+        return (weight*1000)/100;
     }
 
     @Override
