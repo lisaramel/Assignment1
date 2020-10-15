@@ -16,18 +16,6 @@ public class HandleCustomersTest {
 
     HandleCustomers hc = new HandleCustomers();
 
-    /*
-    @Test
-    public void readFromFileToListTest(){
-
-        List<Customer> customers = HandleCustomers.customersFromFileToList("Test/Assignment2/test.read.txt");
-
-        assertTrue(customers.size() == 2);
-        assertFalse(customers.size() == 3);
-    }
-
-     */
-
     @Test
     public void customersFromFileToListTest(){
 

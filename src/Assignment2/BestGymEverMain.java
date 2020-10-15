@@ -18,7 +18,7 @@ public class BestGymEverMain {
         Scanner scan = new Scanner(System.in);
 
         String inFilePath = "src/Assignment2/customers.txt";
-        String outFilePath = "src/Assignment2/active.customer.txt";
+        String outFilePath = "src/Assignment2/active.customers.txt";
 
         List<Customer> allCustomers = hc.customersFromFileToList(inFilePath);
 

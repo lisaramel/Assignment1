@@ -5,7 +5,6 @@ import java.nio.file.*;
 import java.time.*;
 import java.util.*;
 
-
 /**
  * Created by Lisa Ramel
  * Date: 2020-10-13
@@ -85,11 +84,12 @@ public class HandleCustomers {
     }
 
     protected void writeToFileIfCustomer(String writeFile, List<Customer> isCustomerNow) {
-        Path pathOutName = Paths.get(writeFile);
-        try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(pathOutName))) {
+        //Path pathOutName = Paths.get(writeFile);
+        try (PrintWriter writer = new PrintWriter(new FileWriter(writeFile, true))) {
 
             for (Customer c : isCustomerNow) {
-                    writer.print(LocalDate.now() + " " + c.getName() + " " + c.getSecurityNumber() + "\n");
+                    writer.print("Medlem: " + c.getName() + ", " + c.getSecurityNumber()
+                            + "\n" +"Besökte gymmet: " + LocalDate.now() + "\n" + "\n");
             }
 
         } catch (FileNotFoundException e) {

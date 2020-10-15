@@ -32,23 +32,4 @@ public class Customer {
     public String getName() {
         return name;
     }
-
-    public static void main(String[] args) {
-        HandleCustomers hc = new HandleCustomers();
-
-        Scanner scan = new Scanner(System.in);
-
-        String inFilePath = "src/Assignment2/customers.txt";
-        String outFilePath = "src/Assignment2/active.customer.txt";
-
-        List <Customer> allCustomers = hc.customersFromFileToList(inFilePath);
-
-        System.out.println("Ange namn eller personnummer på medlemmen: ");
-        String input = scan.nextLine();
-
-        List <Customer> isCustomerNow = hc.checkIfCustomerNow(allCustomers, input);
-
-        hc.writeToFileIfCustomer(outFilePath, isCustomerNow);
-
-        }
 }
