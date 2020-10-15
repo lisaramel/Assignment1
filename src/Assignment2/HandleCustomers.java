@@ -56,28 +56,6 @@ public class HandleCustomers {
         return allCustomers;
     }
 
-
-
-    /*
-    public static List<Customer> isCustomerNow(List<Customer> allCustomers) {
-
-        List<Customer> isCustomerNow = new ArrayList<>();
-
-        for (Customer c : allCustomers) {
-
-            LocalDate dateToday = LocalDate.now();
-            LocalDate input = LocalDate.parse(c.getMemberSince());
-            Period p = Period.between(input, dateToday);
-
-            if (p.getYears() < 1) {
-                isCustomerNow.add(c);
-            }
-        }
-        return isCustomerNow;
-    }
-
-     */
-
     protected List<Customer> checkIfCustomerNow(List<Customer> allCustomers, String input) {
 
         List<Customer> isCustomerNow = new ArrayList<>();
@@ -131,35 +109,4 @@ public class HandleCustomers {
         }
     }
 }
-        /*
-    public static void writeToFileIfCustomer(String writeFile, List<Customer> isCustomerNowList, String input) {
-        Path pathOutName = Paths.get(writeFile);
-        try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(pathOutName));) {
-
-            for (Customer c : isCustomerNowList) {
-                if (c.getName().equalsIgnoreCase(input) || c.getSecurityNumber().equalsIgnoreCase(input)) {
-                    writer.print(LocalDate.now() + " " + c.getName() + " " + c.getSecurityNumber() + "\n");
-                }
-            }
-
-        } catch (FileNotFoundException e) {
-            System.out.println("Filen kunde inte hittas.");
-            e.printStackTrace();
-            System.exit(0);
-
-        } catch (IOException e) {
-            System.out.println("Gick ej att skriva till filen.");
-            e.printStackTrace();
-            System.exit(0);
-
-        } catch (Exception e) {
-            System.out.println("Ett fel uppstod.");
-            e.printStackTrace();
-            System.exit(0);
-        }
-
-
-}
-*/
-
 
