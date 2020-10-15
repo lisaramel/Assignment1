@@ -84,7 +84,6 @@ public class HandleCustomers {
     }
 
     protected void writeToFileIfCustomer(String writeFile, List<Customer> isCustomerNow) {
-        //Path pathOutName = Paths.get(writeFile);
         try (PrintWriter writer = new PrintWriter(new FileWriter(writeFile, true))) {
 
             for (Customer c : isCustomerNow) {
