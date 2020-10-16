@@ -17,17 +17,17 @@ public class BestGymEverMain {
 
         Scanner scan = new Scanner(System.in);
 
-        String inFilePath = "src/Assignment2/customers.txt";
-        String outFilePath = "src/Assignment2/active.customers.txt";
+        String fileIn = "src/Assignment2/customers.txt";
+        String fileOut = "src/Assignment2/active.customers.txt";
 
-        List<Customer> allCustomers = hc.customersFromFileToList(inFilePath);
+        List<Customer> allCustomers = hc.customersFromFileToList(fileIn);
 
         System.out.println("Ange namn eller personnummer på medlemmen: ");
         String input = scan.nextLine();
 
-        List <Customer> isCustomerNow = hc.checkIfCustomerNow(allCustomers, input);
+        List<Customer> isCustomerNow = hc.checkIfCustomerNow(allCustomers, input);
 
-        hc.writeToFileIfCustomer(outFilePath, isCustomerNow);
+        hc.writeToFileIfCustomer(fileOut, isCustomerNow);
 
     }
 }

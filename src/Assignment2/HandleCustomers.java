@@ -33,10 +33,8 @@ public class HandleCustomers {
                     secondRow = scan.nextLine();
                     customerSecondLine = secondRow.split(",");
                 }
-
                 Customer c = new Customer(customerFirstLine[0].trim(), customerFirstLine[1].trim(), customerSecondLine[0].trim());
                 allCustomers.add(c);
-
             }
 
         } catch (FileNotFoundException e) {
@@ -61,7 +59,7 @@ public class HandleCustomers {
 
         boolean foundCustomer = false;
         for (Customer c : allCustomers) {
-            if (c.getName().equalsIgnoreCase(input) || c.getSecurityNumber().equalsIgnoreCase(input)) {
+            if (c.getName().equalsIgnoreCase(input) || c.getSocialSecurityNumber().equalsIgnoreCase(input)) {
 
                 LocalDate dateToday = LocalDate.now();
                 LocalDate inputDate = LocalDate.parse(c.getMemberSince());
@@ -87,7 +85,7 @@ public class HandleCustomers {
         try (PrintWriter writer = new PrintWriter(new FileWriter(writeFile, true))) {
 
             for (Customer c : isCustomerNow) {
-                    writer.print("Medlem: " + c.getName() + ", " + c.getSecurityNumber()
+                    writer.print("Medlem: " + c.getName() + ", " + c.getSocialSecurityNumber()
                             + "\n" +"Besökte gymmet: " + LocalDate.now() + "\n" + "\n");
             }
 

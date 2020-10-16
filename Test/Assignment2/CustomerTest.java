@@ -24,8 +24,8 @@ public class CustomerTest {
     @Test
     public void getSocialSecurityNumberTest(){
 
-        assertEquals(c.getSecurityNumber(), "7502031234");
-        assertNotEquals(c.getSecurityNumber(), "8505132345");
+        assertEquals(c.getSocialSecurityNumber(), "7502031234");
+        assertNotEquals(c.getSocialSecurityNumber(), "8505132345");
     }
 
     @Test

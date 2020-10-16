@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Project: Objektorienterad programmering och Java
  * Copywrite: MIT
  */
+
 public class HandleCustomersTest {
 
     HandleCustomers hc = new HandleCustomers();
@@ -28,8 +29,8 @@ public class HandleCustomersTest {
 
         allCustomers = hc.customersFromFileToList(readFile);
 
-        assertTrue(allCustomers.size() == 2);
-        assertFalse(allCustomers.size() == 3);
+        assertEquals(allCustomers.size(), 2);
+        assertNotEquals(allCustomers.size(), 3);
 
     }
 
@@ -41,11 +42,11 @@ public class HandleCustomersTest {
         List<Customer> isCustomerNow = hc.checkIfCustomerNow(allCustomers, anna);
         List<Customer> isCustomerNow2 = hc.checkIfCustomerNow(allCustomers, per);
 
-        assertTrue(isCustomerNow.size() == 1);
-        assertFalse(isCustomerNow.size() == 2);
+        assertEquals(isCustomerNow.size(), 1);
+        assertNotEquals(isCustomerNow.size(), 2);
 
-        assertTrue(isCustomerNow2.size() == 0);
-        assertFalse(isCustomerNow.size() == 2);
+        assertEquals(isCustomerNow2.size(), 0);
+        assertNotEquals(isCustomerNow2.size(), 1);
 
     }
 
@@ -74,7 +75,8 @@ public class HandleCustomersTest {
         int afterNewCustomerAdded = countLinesInFileTest(writeFile);
 
         assertTrue(beforeNewCustomerAdded < afterNewCustomerAdded);
-        assertFalse(beforeNewCustomerAdded > afterNewCustomerAdded);
+        assertFalse(beforeNewCustomerAdded == afterNewCustomerAdded);
+        assertFalse(afterNewCustomerAdded == 0);
 
     }
 }

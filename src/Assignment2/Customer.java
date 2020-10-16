@@ -1,7 +1,5 @@
 package Assignment2;
 
-import java.util.*;
-
 /**
  * Created by Lisa Ramel
  * Date: 2020-10-08
@@ -12,17 +10,17 @@ import java.util.*;
 public class Customer {
 
     protected String name;
-    protected String securityNumber;
+    protected String socialSecurityNumber;
     protected String memberSince;
 
     protected Customer(String securityNumber, String name, String memberSince){
         this.name = name;
-        this.securityNumber = securityNumber;
+        this.socialSecurityNumber = securityNumber;
         this.memberSince = memberSince;
     }
 
-    public String getSecurityNumber(){
-        return securityNumber;
+    public String getSocialSecurityNumber(){
+        return socialSecurityNumber;
     }
 
     public String getMemberSince() {
