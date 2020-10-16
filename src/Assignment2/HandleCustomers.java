@@ -69,11 +69,10 @@ public class HandleCustomers {
                     System.out.println(c.getName() + " är medlem på Best Gym Ever. Välkommen!");
                     isCustomerNow.add(c);
 
-                } else if (p.getYears() > 1) {
+                } else
                     System.out.println(c.getName() + "s medlemskap har gått ut.");
                 }
                 foundCustomer = true;
-            }
         }
         if (!foundCustomer) {
             System.out.println("Den här personen har aldrig varit medlem på Best Gym Ever.");

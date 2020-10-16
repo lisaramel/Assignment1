@@ -75,8 +75,8 @@ public class HandleCustomersTest {
         int afterNewCustomerAdded = countLinesInFileTest(writeFile);
 
         assertTrue(beforeNewCustomerAdded < afterNewCustomerAdded);
-        assertFalse(beforeNewCustomerAdded == afterNewCustomerAdded);
-        assertFalse(afterNewCustomerAdded == 0);
+        assertNotEquals(afterNewCustomerAdded, beforeNewCustomerAdded);
+        assertNotEquals(afterNewCustomerAdded, 0);
 
     }
 }
