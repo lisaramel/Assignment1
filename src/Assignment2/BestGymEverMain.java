@@ -23,7 +23,7 @@ public class BestGymEverMain {
         List<Customer> allCustomers = hc.customersFromFileToList(fileIn);
 
         System.out.println("Ange namn eller personnummer på medlemmen: ");
-        String input = scan.nextLine().trim();
+        String input = scan.nextLine();
 
         List<Customer> isCustomerNow = hc.checkIfCustomerNow(allCustomers, input);
 

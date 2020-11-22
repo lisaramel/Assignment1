@@ -68,7 +68,6 @@ public class HandleCustomers {
                 if (p.getYears() < 1) {
                     System.out.println(c.getName() + " är medlem på Best Gym Ever. Välkommen!");
                     isCustomerNow.add(c);
-
                 } else
                     System.out.println(c.getName() + "s medlemskap har gått ut.");
                 }

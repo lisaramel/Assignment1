@@ -1,2 +1,8 @@
 # Project exclude paths
 /out/
+/.idea/
+/Test/
+/src/Assignment1/
+/src/Assignment2/
+/src/Lektion02/HederligeHarrys/
+/src/Lektion09/
