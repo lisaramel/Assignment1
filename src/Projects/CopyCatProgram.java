@@ -14,7 +14,6 @@ public class CopyCatProgram {
 
 
         Scanner sc = new Scanner(System.in, "utf-8");
-        //sc.useDelimiter(" ");
         System.out.print("Skriv något: ");
 
         while(sc.hasNextLine()) {
