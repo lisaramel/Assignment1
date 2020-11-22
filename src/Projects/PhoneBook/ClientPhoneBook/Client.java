@@ -53,13 +53,9 @@ public class Client {
 
                     fromClient = buffIn.readLine();
                     if (fromClient != null)
-                        //System.out.println("Client: " + fromClient);
                         out.writeObject(fromClient);
                     }
 
-                 //if((buffIn.readLine()) == null) {
-                 //    System.exit(0);
-                // }
                 }
             } catch (Exception e) {
                 e.printStackTrace();
