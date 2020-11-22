@@ -21,15 +21,7 @@ public class HusvagnsAnnons extends FordonsAnnons implements IPublishable, IReve
         this.harrysRevenue = harrysRevenue;
 
     }
-/*
-    @Override
-    public void getAnnonsText() {
-        System.out.println(rubrik + "\nPris: " + pris + "\nOm: " + beskrivning + "\nÅrsmodell: " + årsmodell + "\nAntal mil: "
-        + antalMil + "\nBegagnad: " + changeBoolean(begagnad) + "\nDusch: " + changeBoolean(dusch) + "\nAntal bäddar: " + antalBäddar);
-        System.out.println();
-    }
 
- */
     public void printHeader() {
     System.out.println(getRubrik() + " " + getPris() + " kr");
 }

@@ -19,11 +19,6 @@ public class Main {
         HusvagnsAnnons h1 = new HusvagnsAnnons("Husbil", 150000,"En rymlig husbil för sommarsemestern", 2011, 0,false,true, 3);
         FordonsAnnons f1 = new HusvagnsAnnons("Husbil", 150000,"En rymlig husbil för sommarsemestern", 2011, 0,false,true, 3);
 
-      //  b1.getAnnonsText();
-       // m1.getAnnonsText();
-       // h1.getAnnonsText();
-      //  f1.getAnnonsText();
-
         b1.printHeader();
         b1.printCompleteAd();
         System.out.println();
